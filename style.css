@@ -31,8 +31,8 @@ body, html {
 }
 
 img {
-  width:250px;
-  height:150px;
+  width:500px;
+  height:500px;
   object-fit:cover;
   
 }
