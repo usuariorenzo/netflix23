@@ -1,0 +1,61 @@
+body, html {
+  padding: 0 10px;
+  margin: 0;
+  background: #0E0F11;
+  color: #ecf0f1;
+  font-family: 'Open Sans', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.row {
+  overflow:scroll;
+  width:100%;
+}
+
+.row-inner {
+  white-space: nowrap;
+  transition: 0.45s all;
+  margin: 50px 10px;
+}
+
+.tile {
+  position: relative;
+  display:inline-block;
+  margin: 0 5px;
+  transition: 0.45s all;
+  transform-origin: left center;
+}
+
+img {
+  width:250px;
+  height:150px;
+  object-fit:cover;
+  
+}
+.row-inner:hover
+{
+  /*move to the left */
+  transform: translateX(calc(250px*(-0.5)/2));
+}
+
+.row-inner:hover .tile {
+  
+  opacity: .3;
+  
+}
+
+.row-inner:hover .tile:hover {
+  /*set opacity back to 1 */
+  transform: scale(1.5);
+  opacity: 1;
+  
+}
+
+.tile:hover ~ .tile {
+  /* move tiles on the right to the right*/
+  transform: translateX(calc(250px * 0.5));
+}
